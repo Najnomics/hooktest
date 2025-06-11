@@ -13,6 +13,7 @@ Common use cases requiring composition:
 - Cross-chain liquidity pools with bridge integration and slippage protection
 - Yield-generating pools with automated compounders and fee optimizers
 - Stablecoin pools with price oracle integration and emergency circuit breakers
+-----
 
 ## Solution
 
