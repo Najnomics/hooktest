@@ -76,7 +76,6 @@ contract AdapterDeploymentHelper {
     /// @param defaultFee The default fee in basis points
     /// @param governance The governance address
     /// @param hookManager The hook manager address
-    /// @param initialApprovedHooks Initial hooks to approve (unused - kept for interface compatibility)
     /// @param salt Salt for deterministic deployment
     /// @return adapter The deployed adapter address
     /// @dev Hook approval must be done separately by the hook manager after deployment
