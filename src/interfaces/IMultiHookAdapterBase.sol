@@ -5,7 +5,7 @@ import {IPoolManager} from "v4-core/interfaces/IPoolManager.sol";
 import {PoolKey} from "v4-core/types/PoolKey.sol";
 import {PoolId} from "v4-core/types/PoolId.sol";
 
-/// @title IMultiHookAdapterBase
+/// @title IMultiHookAdapterBase//
 /// @notice An interface for the MultiHookAdapterBase contract
 interface IMultiHookAdapterBase {
     /// @notice Thrown when a zero address is provided as a hook

@@ -1,7 +1,7 @@
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.24;
 
-// Import necessary Uniswap v4 core types and interfaces
+// Import necessary Uniswap v4 core types and interfaces//
 import {Hooks} from "@uniswap/v4-core/src/libraries/Hooks.sol";
 import {BaseHook} from "v4-periphery/src/utils/BaseHook.sol";
 import {IHooks} from "@uniswap/v4-core/src/interfaces/IHooks.sol";

@@ -8,7 +8,7 @@ import {Hooks} from "@uniswap/v4-core/src/libraries/Hooks.sol";
 import {MultiHookAdapterBaseV2} from "./base/MultiHookAdapterBaseV2.sol";
 import {IFeeCalculationStrategy} from "./interfaces/IFeeCalculationStrategy.sol";
 
-/// @title MultiHookAdapter
+/// @title MultiHookAdapter//
 /// @notice Immutable implementation of MultiHookAdapterBase with fixed hook sets and fee strategies
 /// @dev Once hooks are registered for a pool, they cannot be changed. Fee configuration is immutable.
 contract MultiHookAdapter is MultiHookAdapterBaseV2 {

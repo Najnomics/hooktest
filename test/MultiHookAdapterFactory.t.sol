@@ -49,7 +49,7 @@ contract MultiHookAdapterFactoryTest is Test, Deployers {
         // Verify deployment
         assertFalse(adapter == address(0), "Adapter should be deployed");
         
-        // Verify constructor parameters
+        // Verify constructor parameters//
         MultiHookAdapter deployedAdapter = MultiHookAdapter(adapter);
         assertEq(address(deployedAdapter.poolManager()), address(manager));
         assertEq(deployedAdapter.defaultFee(), DEFAULT_FEE);

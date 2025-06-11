@@ -9,7 +9,7 @@ import {Hooks} from "@uniswap/v4-core/src/libraries/Hooks.sol";
 import {MultiHookAdapterBaseV2} from "./base/MultiHookAdapterBaseV2.sol";
 import {IFeeCalculationStrategy} from "./interfaces/IFeeCalculationStrategy.sol";
 
-/// @title PermissionedMultiHookAdapter
+/// @title PermissionedMultiHookAdapter//
 /// @notice Permissioned implementation allowing governance to manage hooks and fee configurations
 /// @dev Hooks can be added/removed by approved addresses. Fee configurations can be updated by governance.
 contract PermissionedMultiHookAdapter is MultiHookAdapterBaseV2 {

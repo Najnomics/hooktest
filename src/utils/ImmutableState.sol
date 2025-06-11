@@ -4,7 +4,7 @@ pragma solidity ^0.8.0;
 import {IHooks} from "v4-core/interfaces/IHooks.sol";
 import {IImmutableState} from "../interfaces/IImmutableState.sol";
 
-/// @title Immutable State
+/// @title Immutable State//
 /// @notice An extension of the original UniswapV4 ImmutableState contract purposed for the MultilHookAdapter
 /// @notice Original implementation: https://github.com/Uniswap/v4-periphery/blob/main/src/base/ImmutableState.sol
 

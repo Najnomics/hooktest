@@ -9,7 +9,7 @@ import {PermissionedMultiHookAdapter} from "../PermissionedMultiHookAdapter.sol"
 import {IFeeCalculationStrategy} from "../interfaces/IFeeCalculationStrategy.sol";
 import {MultiHookAdapterFactory} from "./MultiHookAdapterFactory.sol";
 
-/// @title AdapterDeploymentHelper
+/// @title AdapterDeploymentHelper//
 /// @notice Helper contract for deploying adapters with hook registration and fee configuration
 contract AdapterDeploymentHelper {
     

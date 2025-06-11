@@ -8,7 +8,7 @@ import {MultiHookAdapter} from "../MultiHookAdapter.sol";
 import {PermissionedMultiHookAdapter} from "../PermissionedMultiHookAdapter.sol";
 import {IFeeCalculationStrategy} from "../interfaces/IFeeCalculationStrategy.sol";
 
-/// @title MultiHookAdapterFactory
+/// @title MultiHookAdapterFactory//
 /// @notice Factory contract for deploying MultiHookAdapter instances with proper hook addresses
 contract MultiHookAdapterFactory {
     

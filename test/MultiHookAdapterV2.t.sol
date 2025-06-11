@@ -56,7 +56,7 @@ contract MultiHookAdapterV2Test is Test, Deployers {
                 | Hooks.BEFORE_ADD_LIQUIDITY_FLAG | Hooks.AFTER_INITIALIZE_FLAG | Hooks.BEFORE_INITIALIZE_FLAG
         );
 
-        // Deploy adapter to a valid hook address
+        // Deploy adapter to a valid hook address//
         address adapterAddress = address(uint160(adapterFlags));
         deployCodeTo(
             "TestMultiHookAdapterV2.sol", 

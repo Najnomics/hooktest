@@ -9,7 +9,7 @@ import {BeforeSwapDelta} from "v4-core/types/BeforeSwapDelta.sol";
 import {ImmutableState} from "./ImmutableState.sol";
 import {ModifyLiquidityParams, SwapParams} from "v4-core/types/PoolOperation.sol";
 
-/// @title BaseHookExtension
+/// @title BaseHookExtension//
 /// @notice An extension of the original UniswapV4 BaseHook contract purposed for the MultiHookAdapter
 /// @dev This contract copies all concepts as is from the original UniswapV4 BaseHook contract
 /// @dev The modification here lies in the access control seeded to the MultiHookAdapter contract

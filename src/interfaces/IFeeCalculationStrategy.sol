@@ -3,7 +3,7 @@ pragma solidity ^0.8.24;
 
 import {PoolId} from "@uniswap/v4-core/src/types/PoolId.sol";
 
-/// @title IFeeCalculationStrategy
+/// @title IFeeCalculationStrategy//
 /// @notice Interface for fee calculation strategies in MultiHookAdapter
 interface IFeeCalculationStrategy {
     /// @notice Represents a hook's fee contribution with weight

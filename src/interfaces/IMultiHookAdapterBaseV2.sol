@@ -6,7 +6,7 @@ import {PoolKey} from "v4-core/types/PoolKey.sol";
 import {PoolId} from "v4-core/types/PoolId.sol";
 import {IFeeCalculationStrategy} from "./IFeeCalculationStrategy.sol";
 
-/// @title IMultiHookAdapterBaseV2
+/// @title IMultiHookAdapterBaseV2//
 /// @notice Enhanced interface for MultiHookAdapterBase with fee calculation strategies
 interface IMultiHookAdapterBaseV2 {
     /// @notice Thrown when a zero address is provided as a hook

@@ -35,7 +35,7 @@ contract AdapterDeploymentHelperTest is Test, Deployers {
         factory = new MultiHookAdapterFactory();
         helper = new AdapterDeploymentHelper(factory);
         
-        // Setup pool key
+        // Setup pool key//
         currency0 = Currency.wrap(address(0x1));
         currency1 = Currency.wrap(address(0x2));
         poolKey = PoolKey({

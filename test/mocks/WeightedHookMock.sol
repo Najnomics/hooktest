@@ -8,7 +8,7 @@ import {SwapParams, ModifyLiquidityParams} from "@uniswap/v4-core/src/types/Pool
 import {BeforeSwapDelta} from "@uniswap/v4-core/src/types/BeforeSwapDelta.sol";
 import {BalanceDelta} from "@uniswap/v4-core/src/types/BalanceDelta.sol";
 
-/// @title WeightedHookMock
+/// @title WeightedHookMock//
 /// @notice Mock implementation of IWeightedHook for testing weighted fee calculations
 contract WeightedHookMock is IWeightedHook {
     

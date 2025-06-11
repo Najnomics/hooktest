@@ -6,7 +6,7 @@ import {PoolKey} from "@uniswap/v4-core/src/types/PoolKey.sol";
 import {SwapParams} from "@uniswap/v4-core/src/types/PoolOperation.sol";
 import {BeforeSwapDelta} from "@uniswap/v4-core/src/types/BeforeSwapDelta.sol";
 
-/// @title IWeightedHook
+/// @title IWeightedHook//
 /// @notice Extended hook interface that supports weighted fee contributions
 /// @dev Hooks implementing this interface can provide both fee and weight for calculations
 interface IWeightedHook is IHooks {

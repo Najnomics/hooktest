@@ -33,7 +33,7 @@ contract MultiHookAdapterConcreteTest is Test, Deployers {
     function setUp() public {
         deployFreshManagerAndRouters();
         
-        // Deploy adapter (needs valid hook address)
+        // Deploy adapter (needs valid hook address)//
         uint160 adapterFlags = uint160(
             Hooks.BEFORE_INITIALIZE_FLAG | Hooks.AFTER_INITIALIZE_FLAG |
             Hooks.BEFORE_SWAP_FLAG | Hooks.AFTER_SWAP_FLAG |

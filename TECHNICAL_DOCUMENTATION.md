@@ -14,7 +14,7 @@
 11. [Performance Optimizations](#performance-optimizations)
 12. [Future Enhancements](#future-enhancements)
 
----
+--------
 
 ## Project Overview
 
