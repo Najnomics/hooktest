@@ -62,8 +62,11 @@ contract MultiHookAdapterFactory {
             abi.encode(poolManager, defaultFee)
         );
         
+        // Use a modified salt that includes the caller to make deployment unique per caller
+        bytes32 finalSalt = keccak256(abi.encodePacked(salt, msg.sender));
+        
         assembly {
-            adapter := create2(0, add(bytecode, 0x20), mload(bytecode), salt)
+            adapter := create2(0, add(bytecode, 0x20), mload(bytecode), finalSalt)
             if iszero(adapter) { revert(0, 0) }
         }
         
