@@ -160,14 +160,11 @@ contract MultiHookAdapterFactory {
             abi.encode(poolManager, defaultFee, governance, hookManager, enableHookManagement)
         );
         
-        // Use the same modified salt as deployment
-        bytes32 finalSalt = keccak256(abi.encodePacked(salt, msg.sender));
-        
         bytes32 hash = keccak256(
             abi.encodePacked(
                 bytes1(0xff),
                 address(this),
-                finalSalt,
+                salt,
                 keccak256(bytecode)
             )
         );
