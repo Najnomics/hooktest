@@ -79,6 +79,7 @@ contract AdapterDeploymentHelper {
     /// @param initialApprovedHooks Initial hooks to approve
     /// @param salt Salt for deterministic deployment
     /// @return adapter The deployed adapter address
+    /// @dev The caller must be the hook manager to approve hooks
     function deployPermissionedWithSetup(
         IPoolManager poolManager,
         uint24 defaultFee,
@@ -87,6 +88,11 @@ contract AdapterDeploymentHelper {
         address[] calldata initialApprovedHooks,
         bytes32 salt
     ) external returns (address adapter) {
+        // Verify caller is the hook manager if hooks need to be approved
+        if (initialApprovedHooks.length > 0) {
+            require(msg.sender == hookManager, "Only hook manager can approve hooks");
+        }
+        
         // Deploy the permissioned adapter
         adapter = factory.deployPermissionedMultiHookAdapter(
             poolManager,
