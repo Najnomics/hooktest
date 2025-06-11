@@ -16,7 +16,7 @@ contract FeeCalculationStrategy is IFeeCalculationStrategy {
     
     /// @inheritdoc IFeeCalculationStrategy
     function calculateFee(
-        PoolId poolId,
+        PoolId, // poolId unused in current implementation
         WeightedFee[] memory weightedFees,
         FeeConfiguration memory config
     ) external pure override returns (uint24 finalFee) {
