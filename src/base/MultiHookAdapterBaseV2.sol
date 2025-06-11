@@ -100,6 +100,13 @@ abstract contract MultiHookAdapterBaseV2 is BaseHook, IMultiHookAdapterBaseV2 {
         // Deploy fee calculation strategy
         feeCalculationStrategy = new FeeCalculationStrategy();
     }
+    
+    /// @notice Override hook address validation to disable automatic validation during deployment
+    /// @dev The adapter address will be validated during factory deployment with CREATE2
+    function validateHookAddress(BaseHook) internal pure override {
+        // Skip validation - factory handles this with CREATE2 salt selection
+        return;
+    }
 
     /// @inheritdoc IMultiHookAdapterBaseV2
     function registerHooks(PoolKey calldata key, address[] calldata hookAddresses) external virtual override {
