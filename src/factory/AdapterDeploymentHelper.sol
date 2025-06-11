@@ -85,7 +85,7 @@ contract AdapterDeploymentHelper {
         uint24 defaultFee,
         address governance,
         address hookManager,
-        address[] calldata initialApprovedHooks,
+        address[] calldata, /* initialApprovedHooks - unused, kept for interface compatibility */
         bytes32 salt
     ) external returns (address adapter) {
         // Deploy the permissioned adapter
