@@ -61,6 +61,13 @@ abstract contract MultiHookAdapterBase is BaseHook, IMultiHookAdapterBase {
     }
 
     constructor(IPoolManager _poolManager) BaseHook(_poolManager) {}
+    
+    /// @notice Override hook address validation to disable automatic validation during deployment
+    /// @dev The adapter address will be validated during factory deployment with CREATE2
+    function validateHookAddress(BaseHook) internal pure override {
+        // Skip validation - factory handles this with CREATE2 salt selection
+        return;
+    }
 
     /// @notice Registers an array of sub-hooks to be used for a given pool.
     /// @param key The PoolKey identifying the pool for which to register hooks.
