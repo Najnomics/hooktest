@@ -71,15 +71,15 @@ contract AdapterDeploymentHelper {
         );
     }
     
-    /// @notice Deploy PermissionedMultiHookAdapter and setup initial configuration
+    /// @notice Deploy PermissionedMultiHookAdapter 
     /// @param poolManager The Uniswap V4 pool manager
     /// @param defaultFee The default fee in basis points
     /// @param governance The governance address
     /// @param hookManager The hook manager address
-    /// @param initialApprovedHooks Initial hooks to approve
+    /// @param initialApprovedHooks Initial hooks to approve (unused - kept for interface compatibility)
     /// @param salt Salt for deterministic deployment
     /// @return adapter The deployed adapter address
-    /// @dev The caller must be the hook manager to approve hooks
+    /// @dev Hook approval must be done separately by the hook manager after deployment
     function deployPermissionedWithSetup(
         IPoolManager poolManager,
         uint24 defaultFee,
@@ -88,11 +88,6 @@ contract AdapterDeploymentHelper {
         address[] calldata initialApprovedHooks,
         bytes32 salt
     ) external returns (address adapter) {
-        // Verify caller is the hook manager if hooks need to be approved
-        if (initialApprovedHooks.length > 0) {
-            require(msg.sender == hookManager, "Only hook manager can approve hooks");
-        }
-        
         // Deploy the permissioned adapter
         adapter = factory.deployPermissionedMultiHookAdapter(
             poolManager,
@@ -103,10 +98,8 @@ contract AdapterDeploymentHelper {
             salt
         );
         
-        // Approve initial hooks (caller must be hook manager)
-        if (initialApprovedHooks.length > 0) {
-            PermissionedMultiHookAdapter(adapter).batchApproveHooks(initialApprovedHooks);
-        }
+        // Note: Hook approval must be done separately by calling 
+        // PermissionedMultiHookAdapter(adapter).batchApproveHooks(hooks) as the hook manager
     }
     
     /// @notice Deploy adapter with specific hook permissions
