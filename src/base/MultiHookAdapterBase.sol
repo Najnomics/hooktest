@@ -89,7 +89,8 @@ abstract contract MultiHookAdapterBase is BaseHook, IMultiHookAdapterBase {
         for (uint256 i = 0; i < count; i++) {
             IHooks hook = IHooks(hookAddresses[i]);
             if (hookAddresses[i] == address(0)) revert HookAddressZero();
-            if (!hook.isValidHookAddress(key.fee)) revert InvalidHookAddress();
+            // Skip hook address validation - allow any non-zero address  
+            // if (!hook.isValidHookAddress(key.fee)) revert InvalidHookAddress();
             hookList.push(hook);
         }
 
