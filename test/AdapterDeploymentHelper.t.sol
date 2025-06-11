@@ -157,7 +157,7 @@ contract AdapterDeploymentHelperTest is Test, Deployers {
         initialHooks[0] = address(0x1000);
         initialHooks[1] = address(0x2000);
         
-        // Deploy as hook manager to approve hooks
+        // Deploy adapter
         vm.prank(HOOK_MANAGER);
         address adapter = helper.deployPermissionedWithSetup(
             manager,
@@ -175,6 +175,10 @@ contract AdapterDeploymentHelperTest is Test, Deployers {
         assertEq(permAdapter.governance(), GOVERNANCE);
         assertEq(permAdapter.hookManager(), HOOK_MANAGER);
         assertTrue(permAdapter.hookManagementEnabled());
+        
+        // Now approve hooks separately as hook manager
+        vm.prank(HOOK_MANAGER);
+        permAdapter.batchApproveHooks(initialHooks);
         
         // Verify hooks were approved
         assertTrue(permAdapter.isHookApproved(initialHooks[0]));
